@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+
+  <body>
+    <h1>Weather Dashboard</h1>
+        <div class="container-fluid">
+            <div class="row">
+                    <label>Search for a City:</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Phoenix...">
+                            <button class="btn btn-primary search" type="button" id="searchButton"><button>
+                        </div>
+                    </div>
+                    <div class="container cityHistory"></div>
+                    <div class="row today">
+                        <div class="card">
+                            <h2 class="card-header cardTodayCity"></h2>
+                            <h3 class="card-header cardTodayDate"></h3>
+                            <img class="icons"/>
+                            <div class="card-body cardBodyToday"></div>
+                        </div>
+                    </div>
+            </div>
+        </div>      
+    <div class="row fiveDayForecast"></div>
+    <script src="./assets/js/scripts.js"></script>
+  </body>
+</html>
