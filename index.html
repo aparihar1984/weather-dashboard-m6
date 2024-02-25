@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 	<link rel="stylesheet" href="./assets/css/style.css" />
     <title>Weather Dashboard</title>
   </head>
@@ -12,24 +14,29 @@
     <h1>Weather Dashboard</h1>
         <div class="container-fluid">
             <div class="row">
+                <div class="col-12 col-md-3 col-xl-3 columnOne">
                     <label>Search for a City:</label>
-                    <div class="input-group">
+                    <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Phoenix...">
-                            <button class="btn btn-primary search" type="button" id="searchButton"><button>
-                        </div>
+                        <button class="btn btn-primary search" type="button" id="searchButton"><i class="fas fa-search"></i><button>
                     </div>
-                    <div class="container cityHistory"></div>
+                </div>
+            </div>
+            <div class="container cityHistory">
+                <div class="col-12 col-md-9 col-xl-9 columnTwo">
                     <div class="row today">
-                        <div class="card">
+                        <div class="card bg-light mb-3 " style="max-width: 400px;">
                             <h2 class="card-header cardTodayCity"></h2>
                             <h3 class="card-header cardTodayDate"></h3>
                             <img class="icons"/>
                             <div class="card-body cardBodyToday"></div>
                         </div>
                     </div>
+                </div>
             </div>
-        </div>      
+        </div>     
     <div class="row fiveDayForecast"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="./assets/js/scripts.js"></script>
   </body>
 </html>
