@@ -24,3 +24,24 @@ $('.search').on("click", function (event) {
 	getHistory();
 	getWeatherToday();
 });
+
+// Generating Buttons Based On Search History
+var contHistEl = $('.cityHistory');
+function getHistory() {
+	contHistEl.empty();
+
+	for (let i = 0; i < cityHistory.length; i++) {
+
+		var rowEl = $('<row>');
+		var btnEl = $('<button>').text(`${cityHistory[i]}`)
+
+		rowEl.addClass('row histBtnRow');
+		btnEl.addClass('btn btn-outline-secondary histBtn');
+		btnEl.attr('type', 'button');
+
+		contHistEl.prepend(rowEl);
+		rowEl.append(btnEl);
+	} if (!city) {
+		return;
+	}
+};
